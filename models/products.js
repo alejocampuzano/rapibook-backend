@@ -14,14 +14,14 @@ export const product = sequelize.define("product", {
     description: {
         type: DataTypes.STRING,
         allowNull: false
-    }
+    },
     prince: {
         type: DataTypes.DECIMAL,
         allowNull: false
     },
     stock:{
         type: DataTypes.INTEGER,
-        allowNull: false
+        allowNull: false,
         defaultValue: 0
     }
 
