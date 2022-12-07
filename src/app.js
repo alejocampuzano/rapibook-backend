@@ -2,6 +2,7 @@ import express from "express";
 /*Rutas importadas */
 import category from "./routes/category.routes.js";
 
+
 /*Definimos Express */
 const app = express();
 

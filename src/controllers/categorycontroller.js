@@ -5,8 +5,23 @@ export const getCategories = async (req, res) => {
         const categories = await category.findAll();
         res.json(categories)
     }catch (error) {
-        return res.status(500).json(message: error.message)
+        return res.status(500).json({ message: error.message })
 
     }
+}
 
+/*Modulo pos */
+export const postCategory = async (req, res) => {
+    const { name,descripcion } = req.body;
+    try {
+
+     const newCategory = await category .create({
+        name: 
+        descripcion
+     });
+     res.json(newCategory);
+
+    } catch (error) {
+         return res.status(500).json({message: error.message});
+    }
 }
