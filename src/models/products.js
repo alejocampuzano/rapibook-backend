@@ -1,40 +1,34 @@
 import {DataTypes} from "sequelize";
 import {sequelize} from "../configs/database.js"
 
-export const category = sequelize.define("category", {
+export const product = sequelize.define("product", {
     id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
-        primarykey: true
+        primaryKey: true
     },
     name:{
         type: DataTypes.STRING,
-        allowNull: true
+        allowNull: false
     },
     description: {
         type: DataTypes.STRING,
         allowNull: false
     },
+    price: {
+        type: DataTypes.DECIMAL,
+        allowNull: false
+    },
+    stock:{
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        defaultValue: 0
+    }
 
 },{
     /* Opciones del modelo */
     freezeTableName: true,
     timestamps: false
+
 });
 
-/*Relacion de la categoria al producto */
-
-category.hasMany(product, {
-    foreignkey: {
-        name: "category_id",
-        allowNull: false
-    },
-    sourcekey: "id"
-});
-
-product.belongsTo(category, {
-    foreignkey: {
-        name: "category_id"
-    },
-    targetId: "id"
-});
