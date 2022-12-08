@@ -42,7 +42,7 @@ Sequelize es un ORM para Oracle, Postgres, MySQL, MariaDB, SQLite y SQL Server, 
 ### Clonar el proyecto
 
 ```shell
-git clone https://github.com/celluloiddream/pasteleria-api.git
+git clone https://github.com/alejocampuzano/rapibook-backend.git
 ```
 ### Instalar dependencias
 
@@ -61,27 +61,23 @@ Al ejecutar el llamado de instalación se incluye nodemon, se recomienda añadir
 
 ## API endpoints
 
-| ENDPOINT                     | URL                                        | 
+|  ENDPOINT                     | URL                                        | 
 | ---------------------------- | ------------------------------------------ |
 | Registro                     | /register                                  |
 | Iniciar sesión               | /login                                     |
 | Listar/crear/ empleado       | /employees                                 |
 | Editar/borrar empleado       | /employees/:id                             |
-| Listar/crear/ cliente        | /customers                                 |
-| Editar/borrar cliente        | /customers/:id                             |
-| Listar/crear/ productos      | /products                                  |
-| Editar/borrar cliente        | /products/:id                              |
+| Listar/crear/ usuario        | /customers                                 |
+| Editar/borrar usuario        | /customers/:id                             |
+| Listar/crear/ libro          | /libro                                     |
+| Editar/borrar usuario        | /libro/:id                                 |
 | Listar/crear/ categorias     | /categories                                |
 | Editar/borrar categorias     | /categories/:id                            |
-| Listar/crear/ pedidos        | /orders                                    |
-| Editar pedido                | /orders/:id                                |
-| Listar/crear/ diseños        | /designs                                   |
-| Editar diseño                | /designs/:id                               |
-| Listar/crear/ sede           | /outlets                                   |
-| Editar/borrar   sede         | /outlets/:id                               |
-| Listar/crear/ metodo de pago | /payment-methods                           |
-| Editar/borrar metodo de pago | /payment-methods/:id                       |
+| Listar/crear/ factura        | /factura                                   |
+| Editar pedido                | /factura/:id                               |
+| Editar cart                  | /cart/                                     |
 
+ 
 ## Pruebas
 
 Antes de iniciar cada prueba, se borrará la base de datos y se realizarán las migraciones. Eso significa que es ideal tener una base de datos separada tanto para el desarrollo como para las pruebas.
