@@ -44,6 +44,26 @@ export const putCategory = async (req, res) =>{
     }
 }
 
+/* Metodo PATCH */
+
+export const patchCategory = async (req, res) =>{
+    try {
+        const{ id } =req.params;
+        
+
+        const updateCategory = await category.findOne({
+            where:{id}
+        });
+        updateCategory.set(req.body);
+        
+
+        await updateCategory.save();
+        res.json(updateCategory)
+    }catch (error) {
+      return res.status(500).json({message: error.message})  
+    }
+}
+
 /*Metodo delete */
 export const delCategory = async (req, res) => {
     try{
